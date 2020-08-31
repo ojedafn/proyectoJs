@@ -197,7 +197,10 @@
     
       <div class="row" id="presupuesto">
           <div class="col-12 col-lg-12 presupuesto__titulo">
-            <p>Realice su propuesto ahora mismo</p>
+            <div class="presupuesto__titulo">
+              <p id="titlePresupuesto"></p>
+              
+            </div>
           </div>
       </div>
       <div class="row">
@@ -216,6 +219,24 @@
             </div>
         </div>
     </div>
+    <script>
+     let date = new Date();
+        let currentHour = date.getHours();
+        let titleContainer = document.getElementById('titlePresupuesto');
+        let hours = [
+            [6, 12, 'Buen día! Presupuestá tus envíos ahora mismo'],
+            [12, 19, 'Buenas tardes! Presupuestá tus envíos ahora mismo'],
+            [20, 24, 'Buenas noches! Presupuestá tus envíos ahora mismo'],
+            
+        ];
+        let msg = 'Hola!';
+        hours.forEach(hour => {
+            if(currentHour >= hour[0] && currentHour < hour[1]) {
+                msg = hour[2];
+            }            
+        })
+        titleContainer.textContent = msg;
+    </script>
 
 
      <!-- Contactos -->
