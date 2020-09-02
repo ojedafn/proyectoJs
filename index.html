@@ -208,25 +208,31 @@
           <div><p>Acá iría la barra de proceso</p></div>
             <div class="row">
               <div class="col-12 col-lg-12" >
-                <div><p>Acá irían los items del proceso. La idea es que se vayan viendo de a uno a la vez</p></div>
+                <div>
+                  <input type="text" name="name" placeholder="Ingrese ciudad de Origen" id="inputTextNameID">
+                  <button id="btnClick">Enviar</button>
+    
+                </div>
+                <!--<div><p>Acá irían los items del proceso. La idea es que se vayan viendo de a uno a la vez</p></div>
                 <div><p>Datos del usuario. Formulario con Nombre y apellido</p></div>
                 <div><p>Dirección de origen</p></div>
                 <div><p>Dirección de destino</p></div>
                 <div><p>Peso y volumen de encomienda</p></div>
                 <div><p>Modo de retiro (sucursal / domicilio)</p></div>
                 <div><p>presupuesto final</p></div>
-              </div>
+              </div>-->
             </div>
         </div>
     </div>
     <script>
-     let date = new Date();
+        //DOM
+        let date = new Date();
         let currentHour = date.getHours();
         let titleContainer = document.getElementById('titlePresupuesto');
         let hours = [
-            [6, 12, 'Buen día! Presupuestá tus envíos ahora mismo'],
-            [12, 19, 'Buenas tardes! Presupuestá tus envíos ahora mismo'],
-            [20, 24, 'Buenas noches! Presupuestá tus envíos ahora mismo'],
+            [6, 12, 'Buen día!</br><h3> Presupuestá tus envíos ahora mismo</h3>'],
+            [12, 19, 'Buenas tardes!</br><h3> Presupuestá tus envíos ahora mismo</h3>'],
+            [20, 24, 'Buenas noches!</br><h3> Presupuestá tus envíos ahora mismo</h3>'],
             
         ];
         let msg = 'Hola!';
@@ -235,7 +241,17 @@
                 msg = hour[2];
             }            
         })
-        titleContainer.textContent = msg;
+        titleContainer.innerHTML = msg; //innerHTML permite leer en js etiquetas del html
+
+        //eventos
+        let btnClick = document.getElementById('btnClick');
+        btnClick.addEventListener('click', function(){
+            alert('click');
+        });
+        let inputTextName = document.getElementById('inputTextNameID');
+        inputTextName.addEventListener('input', function() {
+            console.log('input');
+        });
     </script>
 
 
