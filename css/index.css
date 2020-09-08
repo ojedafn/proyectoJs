@@ -3,6 +3,7 @@
   float: right;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 0px;
  }
@@ -16,7 +17,6 @@
   border-radius: 10px;
 }
 .nav{
-  height: 80px; 
 }
 
 .navbar-brand img {
