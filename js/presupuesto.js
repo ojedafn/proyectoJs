@@ -1,12 +1,48 @@
 
 //datos del usuario
 
-let Cliente = function(){
-	this.nombre = nombre;
-	this.apellido = apellido;
-  	this.getFullName = function () {
-    	return `${this.nombre} ${this.apellido}`
-  }
+let sucursal = [{		{
+        "localidad" : "Mar del Plata ",
+        "provincia": "Buenos Aires",
+        "id" : "1",
+        "direccion" : " ",
+        "latitud" : ,
+        "longitud" : 
+    },{
+        "localidad" : "La Plata ",
+        "provincia": "Buenos Aires",
+        "id" : "2 ",
+        "direccion" : " ",
+        "latitud" : ,
+        "longitud" : 
+    },{
+        "localidad" : "Bahia Blanca",
+        "provincia": "Buenos Aires",
+        "id" : "3",
+        "direccion" : " ",
+        "latitud" : ,
+        "longitud" : 
+    },{
+    	"localidad" : "Rosario",
+    	"provincia": "Santa Fe",
+        "id" : "4",
+        "direccion" : " ",
+        "latitud" : ,
+        "longitud" : 
+    },{
+    	"localidad" : "Neuquen",
+    	"provincia": "Neuquen",
+        "id" : "5",
+        "direccion" : " ",
+        "latitud" : ,
+        "longitud" : 
+    }];
+
+
+
+let cliente = {
+    "nombre y apellido" : " "
+    "id" = ,
 }
 
 //direccion origen / destino

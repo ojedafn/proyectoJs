@@ -1,34 +1,51 @@
-.logo img {
-  margin: 10px; }
 
 #menu {
   float: right;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 0px; }
+  padding: 0px;
+ }
 
-#menu li {
-  padding: 5px;
-  font-size: 18px; }
+.nav-link{
+  margin: 2px;
+  color:#21618C;
+}
+.active:hover{
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+.nav{
+  height: 80px; 
+}
 
-.nav-item:hover {
-  background-color: #F4F6F6;
-  border-radius: 5px; }
-
-#nav {
-  background-color: white !important;
-  opacity: 0.8;
-  }
-
-#nav img {
+.navbar-brand img {
   height: 70px;
   margin: 0;
   padding: 0; }
 
-#nav img:hover {
-  transform: scale(1.1);
-  transition: transform .5s; }
+.top-nav-collapse .navbar-brand img:hover {
+  transform: scale(1.03);
+  transition: transform .5s;
+}
+
+/*CLASES DE NAV ANIM*/
+.scrolling-navbar .logo img{
+  opacity: 0.6;
+}
+.scrolling-navbar{
+  background-color:transparent;
+  box-shadow: 0px;
+}
+
+.top-nav-collapse {
+  background-color: rgba(255, 255, 255, 0.966);
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+.top-nav-collapse .logo img{
+  opacity: 1;
+}
+/*FIN CLASES DE NAV ANIM*/
 
 .camion img {
   width: 100%; }
@@ -48,22 +65,15 @@ body {
 .childNos {
   width: 80%;
   float: center;
-  margin: .5em auto; }
-
-/*.nosotros__texto{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}*/
+  margin: .5em auto; 
+}
 .nosotros__titulo p {
-  border-top: solid 5px #D0D3D4;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 40px;
   color: #21618C;
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: 20px;
+  padding: 10px;
   text-shadow: 1px 1px #ccd1d1; }
 
 .nosotros__img {
@@ -236,18 +246,42 @@ body {
 
 /*Presupuesto*/
 .presupuesto__titulo p{
-  border-top: solid 5px #D0D3D4;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 40px;
   color: #21618C;
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: 10px;
+  padding: 0px;
   text-shadow: 1px 1px #ccd1d1;
 
 }
 .presupuesto__subtitulo{
   text-align: center;
+}
+
+.presupuesto__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.presupuesto__labels{
+  display: flex;
+  flex-direction: column;
+  border-top: solid 4px #F3CD60;
+  padding: 20px;
+  margin: 20px;
+  text-align: left;
+}
+
+.buttonForm{
+  width: 80px;
+  height: 30px;
+  margin: 20px;
+  background-color: #F3CD60;
+  margin-top: 10px;
+  border: transparent;
+  float: right;
 }
 
 
@@ -266,13 +300,12 @@ body {
   padding: 0px; }
 
 .contacto__titulo p {
-  border-top: solid 5px #D0D3D4;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 40px;
   color: #21618C;
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: 10px;
+  padding: 10px;
   text-shadow: 1px 1px #ccd1d1; }
 
 .contacto__items {

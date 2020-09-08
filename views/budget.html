@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Tag para que el responsive-->
+  <!-- titulos -->
+  <meta name="description" content="En Expreso TAS Mar del Plata realizamos traslados de mercadería a un gran número de localidades en todo el país. Hacemos entregas puerta a puerta y damos a nuestros clientes un trato personalizado y profesional. Hacemos carga y descarga de mercadería en tránsito. Nos caracterizamos por la experiencia y la puntualidad. Tenemos diez años de experiencia ofreciendo servicios a todo el público en Argentina.">
+  <meta name="keywords"
+   content="Expreso , TAS, Mar del Plata, MDP, Transporte de mercadería, Encomiendas, Mudanzas, Transporte seguro, Envios">
+  <title> Expreso TAS Mar del Plata. Transporte Ágil y Seguro </title>
+  <!-- titulos -->
+  <!--archivos mapa-->
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
+  <!-- -->
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <!-- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/grid/">
+  
+  <!-- mi css-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+  <link rel="shortcut icon" type="image/ico" href="../favicon.ico"/>
+
+
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-expand-md shadow-none fixed-top scrolling-navbar nav">
+        <div class="col-12 col-md-4 col-lg-6 logo">
+          <a class="navbar-brand" href="../index.html"><img src="../img/logo2.svg"></a>    
+        </div>
+        <div class="col-12 col-md-8 col-lg-6">
+          <ul class="navbar-nav" id="menu">
+            <li class="nav-item active" id="botonSal">
+              <a class="nav-link"  href="../index.html#salidas"><b>Salidas Diarias</b></a>
+            </li>
+            <li class="nav-item active" id="botonDirec">
+              <a class="nav-link" href="../index.html#direccion"><b>Dirección</b></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="./contact.html"><b>Contacto</b></a>
+        </li>
+          </ul>
+        </div>
+       </nav> 
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-lg-12 camion" id="home">
+        <img src="../img/camion6.jpg">
+      </div>
+    </div>
+
+
+   <!--Js presupuesto -->
+    
+    <div class="row">
+      <div class="col-12 col-lg-12 presupuesto__titulo">
+        <div class="presupuesto__titulo">
+          <p id="titlePresupuesto"></p>        
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-12 col-lg-12 presupuesto__subtitulo">
+        <hr>
+      </div>
+    </div>
+
+    <form id="budget-form">
+
+      <div class="row presupuesto__form">
+        
+        <div class="col-12 col-md-4 col-lg-2 presupuesto__labels" >
+            <label class="labelForm" for="name">Ingresa tu Nombre y Apellido</label>
+            <input class="inputForm" type="text" id="name">
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-2 presupuesto__labels" >
+          <label class="labelForm" for="origen">Elige la sucursal más cercana para envíar tus encomiendas:</label>
+          <select class="inputForm sucursal" name="origen" id="sendLocal"></select>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-2 presupuesto__labels" >
+          <label class="labelForm" for="destino">Ahora la ciudad a donde quieres enviar tus encomiendas:</label>
+          <select class="inputForm sucursal" name="origen" id="receptLocal"></select>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-2 presupuesto__labels" >
+          <label class="labelForm" for="bulto">Contanos cuanto pesa tu encomienda:</label>
+          <select class="inputForm" name="kilos" id="kilos"></select>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-2 presupuesto__labels" >
+          <label class="labelForm" for="entrega">Selleciona un tipo de entrega:</label>
+              <select class="inputForm" name="entrega" id="entrega">
+                <option value="1">Retiro en sucursal</option>
+                <option value="2">Entrega a domicilio</option>
+              </select>
+        </div>
+
+      
+      
+      </div>
+      
+      <button class="buttonForm" type="submit">ENVIAR</button>
+  </form>
+
+  
+    
+    <!-- footer-->
+
+    <div class="row footer">
+        <div class="col-12 col-lg-12">
+            <!--<div class="row">
+              <div class="col-12 col-lg-12 footer__home">
+                <a href="#home"><img src="https://img.icons8.com/material-two-tone/48/000000/real-estate.png"/></a>
+              </div> 
+            </div>-->
+            <div class="row">
+              <div class="col-6 col-lg-6 footer__logo">
+                <img src="../img/logo1.jpg">  
+              </div>
+              <div class="col-6 col-lg-6 footer__info">
+                <p>Horarios de Atención <br>Lunes a Viernes: 8 a 18hs<br>Sábados y Feriados: 8 a 12hs</p> 
+              </div>            
+             </div>                  
+                   
+            <div class="row">
+              <div class="col-12 col-lg-12 footer__autor">
+                <p>Copyright 2020. Expreso Tas Mar del Plata. Todos los derechos reservados. <br>Powered with ♡. <a href="">By Florence SD</a></p>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row" id="wsp">
+      <div class="col-12 col-lg-12">
+        <img class="animate__animated animate__pulse" id="animacion" src="../img/wsp.jpg">
+        <div class="wsp"><a href="https://wa.me/5492235230684" target="_blank">Contáctanos por whatsapp</a></div>
+      </div>
+    </div>
+
+  </div><!--Cierra el container-->
+<!-- NAV COLLAPSE -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+<!-- NC -->
+<script type="text/javascript" src="../js/budget.js"></script>
+</body>
+</html>
