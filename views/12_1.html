@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+        type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                jQuery
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4" id="column-products">
+                <ul class="list-group" id="productsContainer">
+                </ul>
+            </div>
+            <div class="col-sm-4" id="column-order">
+                <ul class="list-group" id="orderContainer"></ul>
+            </div>
+            <div class="col-sm-4" id="column-detail">
+                <h2>Total</h2>
+                <p class="totalPrice"></p>
+            </div>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script>
+        function addOrder(product) {
+            order.push(product);
+            renderOrder();
+        }
+        function renderOrder() {
+            $orderContainer.empty();
+            let total = 0;
+            order.forEach(function(product, i) {
+                $orderContainer.append(`<li class="list-group-item">$${product.price} - ${product.name}</li>`);
+                total = total + product.price;
+            });
+            $('.totalPrice').html(`$${total}`);
+        }
+        function renderProducts() {
+            products.forEach((product, index) => {
+                $productsContainer.append(`
+                <li class="list-group-item">
+                    $${product.price} - ${product.name}
+                    <button class="btn btn-primary btn-group-item" data-ind="${index}">Select</button>
+                </li>`);
+            });
+            const $listItems = $('.list-group-item');
+            $('.btn-group-item').click((event) => {
+                const productSelected = products[$(event.target).data('ind')];
+                addOrder(productSelected);
+            });
+            $listItems.hover(
+                (event)=>{
+                    $(event.target).css('background-color', '#CCC').css('cursor', 'pointer');
+                },
+                (event)=>{
+                    $(event.target).css('background-color', '#FFF');
+                },
+            )
+        }
+        $('document').ready(() => {
+            $productsContainer = $('#productsContainer');
+            $orderContainer = $('#orderContainer');
+            renderProducts();
+        });
+    </script>
+</body>
+</html>
