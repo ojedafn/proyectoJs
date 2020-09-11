@@ -67,19 +67,22 @@ function compareStrings(a, b) {
   })
 //
 let sucursal;
-sucursal = document.getElementById('sendLocal'); 
+sucursal = document.getElementsByName('sucursal'); 
+console.log(sucursal);
 function loadLocal() {
-    sucursalArray.forEach(function(localidad) {
-    let item = document.createElement('option');
-    item.textContent = localidad.localidad;
-    sucursal.appendChild(item);
+    sucursalArray.forEach(function(localidad) { 
+    sucursal.forEach(function(inputSucural){
+        let item = document.createElement('option');
+        item.textContent = localidad.localidad;
+        inputSucural.appendChild(item);
     });
-    sucursal.value=-1;
-};
+});
+sucursal.forEach(function (iSucursal){
+    iSucursal.value = -1;
+});  
+}
 loadLocal();
-/* Cuando quiero usarlo con clases o name para reutilizar la funcion en dos lugares del formulario se me rompe
-let sucursal;
-*/
+
 
 const KEYNAME = "keyName";
 let nameInput = document.getElementById("name");
@@ -128,6 +131,3 @@ function alertFunction(){
     alert("Los envíos a domicilio tienen un costo adicional de entre $200 y $500 según la dirección");
     }
 }
-
-
-
