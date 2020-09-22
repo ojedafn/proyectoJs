@@ -244,6 +244,7 @@ body {
     transform: rotateX(-360deg); } }
 
 /*Presupuesto*/
+
 .presupuesto__titulo p{
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -252,16 +253,47 @@ body {
   margin-top: 10px;
   padding: 0px;
   text-shadow: 1px 1px #ccd1d1;
-
+  margin-bottom: 30px;
 }
-.presupuesto__subtitulo{
+
+
+.full-size {
+  background-color: rgba(128, 128, 128, 0.069);
   text-align: center;
+  display: flex;  
+  justify-content: space-around;
+  width: 100%;
 }
 
-.presupuesto__form {
+.budget__form{
+  text-align: center;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+}
+.error { /* esta clase es la del error que tiran las reglas, la vimos inspeccionando */
+  text-decoration: underline;
+  font-size: 10px;
+  color: rgb(162, 24, 24);
+}
+.breadcrumb{
+background-color:#297fb9a8;
+color: white;
+text-align: center !important;
+width: 100%;
+border-radius: 0;
+}
+.budget__info{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+#barra{
+padding: 0%;
+}
+.btn-primary{
+border: none;
+margin-top: 10px;
+margin-left: 0px;
 }
 
 .presupuesto__labels{
@@ -283,7 +315,62 @@ body {
   float: right;
 }
 
+.modal-body{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: left;
+}
 
+.modal-title{
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  color: #21618C;
+}
+
+.destinos div{
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 15px;
+  text-align: left;
+}
+.bulto div{
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 15px;
+  text-align: left;
+}
+.budget__price{
+  font-size: 24px;
+  font-weight: bold;
+  color: #00cc33a4;
+  margin-top: 20px;
+  text-align: center;  
+}
+#budgetModal{
+  border-radius: 50%;
+  background-color: #00cc33a4;
+  color: white;
+  width: fit-content;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.aclaracion{
+  font-size: 14px;
+  padding: 5px;
+  margin-top: 20px;
+  text-align: left;
+}
+.buttonModal{
+  float: right !important;
+}
 
 /*Contactos*/
 .parentCon {
@@ -356,6 +443,8 @@ body {
 .mail {
   background-image: url(../img/email.jpg);
   opacity: 0.8; }
+
+
 
 /*footer*/
 .footer {

@@ -9,6 +9,7 @@
    content="Expreso , TAS, Mar del Plata, MDP, Transporte de mercadería, Encomiendas, Mudanzas, Transporte seguro, Envios">
   <title> Expreso TAS Mar del Plata. Transporte Ágil y Seguro </title>
   <!-- titulos -->
+
   <!--archivos mapa-->
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -17,14 +18,17 @@
   <!-- -->
 
   <!-- Bootstrap core CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"><!--Bootstrap-->
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
   <!-- -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/grid/">
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!-- jquery -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script><!-- Bootstrap-->
+  <!-- debe ir despues de jquery porque es una extension-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script><!-- libreria de validacion ligada a jquery-->
   <!-- mi css-->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">  
@@ -65,101 +69,188 @@
 
    <!--Js presupuesto -->
     
-    <div class="row">
+   <div class="row">
       <div class="col-12 col-lg-12 presupuesto__titulo">
         <div class="presupuesto__titulo">
           <p id="titlePresupuesto"></p>        
         </div>
       </div>
     </div>
-  
-    <div class="row">
-      <div class="col-12 col-lg-12 presupuesto__subtitulo">
-        <hr>
+   
+  <div class="row budget__info">
+    
+     <!-- STEP 1 -->
+    <div class="col-lg-2" id="barra">
+      <div class="breadcrumb full-size" id="step1Label">Tus datos</div>
+      <div class="budget__steps" id="step1">
+        <form action="#" name="step1">
+          <div class="form-group">
+              <label for="fullName">Ingresa tu Nombre y Apellido</label>
+              <input type="text" name="fullName" id="fullName" class="form-control" required>
+              
+              <label for="exampleInputEmail1">Email</label>
+              <input type="email" name="email" id="email" class="form-control">
+            </div>
+          <button type="submit" class="btn btn-primary">Siguiente</button>
+        </form>
       </div>
     </div>
 
-    <form id="budget-form">
-
-      <div class="row presupuesto__form">
-        
-        <div class="col-12 col-md-4 col-lg-2 presupuesto__labels" >
-            <label class="labelForm" for="name">Ingresa tu Nombre y Apellido</label>
-            <input class="inputForm" type="text" id="name" required placeholder="Nombre y Apellido">
-        </div>
-
-        <div class="col-12 col-md-4 col-lg-2 presupuesto__labels" >
-          <label class="labelForm" for="origen">Elige la sucursal más cercana para envíar tus encomiendas:</label>
-          <select class="inputForm sucursal" name="sucursal" id="origen" required placeholder="Origen"></select>
-        </div>
-
-        <div class="col-12 col-md-4 col-lg-2 presupuesto__labels" >
-          <label class="labelForm" for="destino">Ahora la ciudad a donde quieres enviar tus encomiendas:</label>
-          <select class="inputForm sucursal" name="sucursal" id="destino" required placeholder="Destino"></select>
-        </div>
-
-        <div class="col-12 col-md-4 col-lg-2 presupuesto__labels" >
-          <label class="labelForm" for="bulto">Contanos cuanto pesa tu encomienda:</label>
-          <select class="inputForm" name="kilos" id="kilos" required placeholder="kilos"></select>
-        </div>
-
-        <div class="col-12 col-md-4 col-lg-2 presupuesto__labels" >
-          <label class="labelForm" for="entrega">Selleciona un tipo de entrega:</label>
-              <select class="inputForm" name="entrega" id="entrega">
-                <option value="1">Retiro en sucursal</option>
-                <option value="2">Entrega a domicilio</option>
-              </select>
-        </div>
-
-      
-      
-      </div>
-      
-      <button class="buttonForm" type="submit">ENVIAR</button>
-  </form>
-
-  
     
-    <!-- footer-->
+    <!-- STEP 2 -->
+    <div class="col-lg-2" id="barra">
+      <div class="breadcrumb full-size" id="step2Label">Origen del envio</div>
+       <div class="budget__steps" id="step2">
+        <form action="#" name="step2">
+          <div class="form-group">      
+            <label class="labelForm" for="origen">Selleciona la sucursal más cercana para envíar tus encomiendas:</label>
+            <select class="inputForm form-control sucursal" name="sucursal" id="origen" required placeholder="Origen"></select>
+            <button type="submit" class="btn btn-primary">Siguiente</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
-    <div class="row footer">
-        <div class="col-12 col-lg-12">
-            <!--<div class="row">
-              <div class="col-12 col-lg-12 footer__home">
-                <a href="#home"><img src="https://img.icons8.com/material-two-tone/48/000000/real-estate.png"/></a>
-              </div> 
-            </div>-->
-            <div class="row">
-              <div class="col-6 col-lg-6 footer__logo">
-                <img src="../img/logo1.jpg">  
-              </div>
-              <div class="col-6 col-lg-6 footer__info">
-                <p>Horarios de Atención <br>Lunes a Viernes: 8 a 18hs<br>Sábados y Feriados: 8 a 12hs</p> 
-              </div>            
-             </div>                  
-                   
-            <div class="row">
-              <div class="col-12 col-lg-12 footer__autor">
-                <p>Copyright 2020. Expreso Tas Mar del Plata. Todos los derechos reservados. <br>Powered with ♡. <a href="">By Florence SD</a></p>
+    
+    <!-- STEP 3 -->
+    <div class="col-lg-2" id="barra">
+      <div class="breadcrumb full-size" id="step3Label">Destino del envio</div>
+      <div class="budget__steps" id="step3">
+        <form action="#" name="step3">
+          <div class="form-group">
+            <label class="labelForm" for="destino">Ahora la ciudad a donde quieres enviar tus encomiendas:</label>
+            <select class="inputForm form-control sucursal" name="sucursal" id="destino" required placeholder="Destino"></select>
+          <button type="submit" class="btn btn-primary">Siguiente</button>
+          </div>
+        </form>
+      </div>
+    </div>
+   
+    <!-- STEP 4 -->
+    <div class="col-lg-2" id="barra">  
+      <div class="breadcrumb full-size" id="step4Label">Peso del envio</div>    
+      <div class="budget__steps" id="step4">
+        <form action="#" name="step4">
+          <div class="form-group">      
+              <!-- Aca quisiera agregar opcion ams de un bulto  -->
+            <label class="labelForm" for="bulto">Contanos cuanto pesa tu encomienda:</label>
+            <input  type="number" placeholder="en Kg" id="weight" class="form-control" required>
+          <button type="submit" class="btn btn-primary">Siguiente</button>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="col-lg-2" id="barra">  
+      <div class="breadcrumb full-size" id="step5Label">Modo de entrega</div> 
+      <div class="budget__steps" id="step5">
+        <form action="#" name="step5">
+          <div class="form-group">      
+            <label class="labelForm" for="entrega">Selleciona el tipo de entrega:</label>
+                <select class="inputForm form-control" name="entrega" id="entrega">
+                  <option value="1">Retiro en sucursal</option>
+                  <option value="2">Entrega a domicilio</option>
+                </select>
+                <button type="button" class="btn btn-primary" id="submitBudget"  data-toggle="modal" data-target="#exampleModal">Enviar</button>
+          </div>
+        </form>
+      </div>                                             
+    </div>
+
+     <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="modal-header">
+              <p class="modal-title" id="fullNameBudget"></p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- Aca quisiera modificar los campos y el costo dinamicamente desde el modal -->
+            <div class="row destinos">
+              <div class="col-md-12" id="origenBudget"></div>
+            </div>
+            <div class="row destinos">
+              <div class="col-md-12" id="destinoBudget"></div>
+            </div>
+            <div class="row bulto">
+              <div class="col-md-12" id="bulto"></div>
+            </div>
+            <div class="row budgetModal">
+              <div class="col-md-6 budget__price">Su presupuesto aproximado es:</div>
+              <div class="col-md-4"><p id="budgetModal"></p></div>
+            </div>
+            <div class="row aclaracion">
+              <div class="col-md-12">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit ullam laborum, maiores architecto aut quo repudiandae adipisci magni voluptate hic ad voluptatem et soluta veritatis veniam, aspernatur, dolores voluptatibus unde.</p>
               </div>
             </div>
+            <button type="submit" class="btn btn-primary buttonModal" onClick="refreshPage()">Cerrar</button>
+            <button type="button" class="btn btn-primary buttonModal">Enviar copia al mail</button>
+            
+          </div>
         </div>
-    </div>
-    
-    <div class="row" id="wsp">
-      <div class="col-12 col-lg-12">
-        <img class="animate__animated animate__pulse" id="animacion" src="../img/wsp.jpg">
-        <div class="wsp"><a href="https://wa.me/5492235230684" target="_blank">Contáctanos por whatsapp</a></div>
       </div>
     </div>
+  </div>
+  </div><!--cierra el row budget-->
+
+  
+
+
+  
+ 
+
+  
+
+  
+    
+  <!-- footer-->
+
+  <div class="row footer">
+      <div class="col-12 col-lg-12">
+          <!--<div class="row">
+            <div class="col-12 col-lg-12 footer__home">
+              <a href="#home"><img src="https://img.icons8.com/material-two-tone/48/000000/real-estate.png"/></a>
+            </div> 
+          </div>-->
+          <div class="row">
+            <div class="col-6 col-lg-6 footer__logo">
+              <img src="../img/logo1.jpg">  
+            </div>
+            <div class="col-6 col-lg-6 footer__info">
+              <p>Horarios de Atención <br>Lunes a Viernes: 8 a 18hs<br>Sábados y Feriados: 8 a 12hs</p> 
+            </div>            
+            </div>                  
+                  
+          <div class="row">
+            <div class="col-12 col-lg-12 footer__autor">
+              <p>Copyright 2020. Expreso Tas Mar del Plata. Todos los derechos reservados. <br>Powered with ♡. <a href="">By Florence SD</a></p>
+            </div>
+          </div>
+      </div>
+  </div>
+  
+  <div class="row" id="wsp">
+    <div class="col-12 col-lg-12">
+      <img class="animate__animated animate__pulse" id="animacion" src="../img/wsp.jpg">
+      <div class="wsp"><a href="https://wa.me/5492235230684" target="_blank">Contáctanos por whatsapp</a></div>
+    </div>
+  </div>
 
   </div><!--Cierra el container-->
 <!-- NAV COLLAPSE -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 <!-- NC -->
+<script src="../js/sucursalArray.js"></script>
 <script type="text/javascript" src="../js/budget.js"></script>
 </body>
 </html>
