@@ -155,7 +155,7 @@ $('document').ready(()=> {
      //AJAX
     $.ajax({
         dataType: "json",
-        url: "/proyecto/js/sucursalArray.json",
+        url: "/proyectoJs/js/sucursalArray.json",
         success: function (data,status,xhr) {  
             data.sort(function(a, b) {
                 return compareStrings(a.localidad, b.localidad);
