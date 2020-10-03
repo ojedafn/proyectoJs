@@ -371,6 +371,15 @@ margin-left: 0px;
 .buttonModal{
   float: right !important;
 }
+.date{
+  
+  text-align: right;
+  color: #21618C;
+}
+.date p{
+  margin-bottom: 0px !important;
+  font-weight: bold;
+}
 
 /*Contactos*/
 .parentCon {

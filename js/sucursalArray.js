@@ -38,5 +38,5 @@ let sucursalArray = [{
   "mapa": "https://goo.gl/maps/xwEVGWrgLNeZLmpa6",
   "distancias": [//distancia en posicion X = distancia a la sucursal con id = X
     997,1216,534,1160,0]
-}];
+}]
 

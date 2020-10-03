@@ -29,6 +29,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script><!-- Bootstrap-->
   <!-- debe ir despues de jquery porque es una extension-->
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script><!-- libreria de validacion ligada a jquery-->
+  <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
   <!-- mi css-->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">  
@@ -88,7 +89,7 @@
               <label for="fullName">Ingresa tu Nombre y Apellido</label>
               <input type="text" name="fullName" id="fullName" class="form-control" required>
               
-              <label for="exampleInputEmail1">Email</label>
+              <label for="exampleInputEmail1">Ingrese su GMAIL</label>
               <input type="email" name="email" id="email" class="form-control">
             </div>
           <button type="submit" class="btn btn-primary">Siguiente</button>
@@ -165,13 +166,16 @@
       <div class="modal-content">
         <div class="modal-body">
           <div class="container-fluid">
+            <div class="date">
+              <p id="date"></p>
+            </div>
             <div class="modal-header">
               <p class="modal-title" id="fullNameBudget"></p>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <!-- Aca quisiera modificar los campos y el costo dinamicamente desde el modal -->
+            
             <div class="row destinos">
               <div class="col-md-12" id="origenBudget"></div>
             </div>
@@ -187,9 +191,10 @@
             </div>
             <div class="row aclaracion">
               <div class="col-md-12">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit ullam laborum, maiores architecto aut quo repudiandae adipisci magni voluptate hic ad voluptatem et soluta veritatis veniam, aspernatur, dolores voluptatibus unde.</p>
+                <p>Los envios a Domicilio pueden tener un cargo adicional de entre $200 y $600 acorde a la distancia requerida a confirmar al momento de realizar el envío con el local a cargo</p>
               </div>
             </div>
+            
             <button type="submit" class="btn btn-primary buttonModal" onClick="refreshPage()">Cerrar</button>
             <button type="button" class="btn btn-primary buttonModal">Enviar copia al mail</button>
             
