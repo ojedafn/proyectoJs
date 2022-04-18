@@ -1,2 +1,2 @@
 # proyectoJs
-Proyecto final de curso JS en Coder House
+Proyecto final de curso JS 2020 en Coder House
